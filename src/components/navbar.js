@@ -26,7 +26,7 @@ function Nav_Bar() {
                             <a href="#"><Image className='' src={Logo} /></a>
                         </div>
                     </div>
-                    <div className="nav_right">
+                    <div className="nav_right mobile_none">
                         <div className="nav_search">
                             < Image className='searchIcon' src={Search} />
                         </div>

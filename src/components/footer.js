@@ -11,6 +11,7 @@ import Instagram from '../img/social/inst.svg';
 import Youtube from '../img/social/youtube.svg';
 
 import RightArrow from '../img/rightarrow.svg';
+import footLogo from '../img/footLogo_2.svg';
 
 function Footer() {
     return (
@@ -20,8 +21,7 @@ function Footer() {
                 <div className="footer_row row">
                     <div className="col footWidget_col foot_logo">
                         <div className="footwidget ">
-                            <a href="#"><Image src={logo_2} /></a>
-                            <p>© 2022 Artusine <br /> All Rights Reserved</p>
+                            <Image src={footLogo} />
                         </div>
                     </div>
                     <div className="col footWidget_col quickLinks">
@@ -53,7 +53,7 @@ function Footer() {
                                 <li><a href="#"><Image src={Twitter} /> Twitter</a></li>
                                 <li><a href="#"><Image src={Facebook} /> Facebook</a></li>
                                 <li><a href="#"><Image src={Instagram} /> Instagram</a></li>
-                                <li><a href="#"><Image src={Youtube} /></a> Youtube</li>
+                                <li><a href="#"><Image src={Youtube} /> Youtube</a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,6 +70,9 @@ function Footer() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="container">
+                <div className="copyright text-center">Copyright © 2022 Artusine. All Rights Reserved</div>
             </div>
         </footer>
     );
