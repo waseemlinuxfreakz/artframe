@@ -18,7 +18,7 @@ function CustomeFrame() {
                     <div className="customize_frame_box">
                         <div className="customeze_row">
                             <div className="row">
-                                <div className="col-xl-4 col-lg-7 col-md-7 customize_left">
+                                <div className="col-xl-4 col-lg-7 col-md-12 customize_left">
                                     <div className="custome_frame_box">
                                         <h5 className="custome_frame_title">Your Colors </h5>
                                         <p>Click on the dots below to choose your desired colors </p>
@@ -35,7 +35,7 @@ function CustomeFrame() {
                                         </div>
                                     </div>
                                     <div className="custome_frame_box">
-                                        <h5 className="center_title"> <span></span> Pick a hormony <span></span> </h5>
+                                        <h5 className="custome_frame_title">Pick a hormony </h5>
                                         <Dropdown className='select_option'>
                                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                                                 harmony <Image src={DownAngel} />
@@ -88,7 +88,7 @@ function CustomeFrame() {
                                     </div>
                                     <p className="lina_line">lina</p>
                                 </div>
-                                <div className="col-xl-3 col-lg-5 col-md-5 customize_right">
+                                <div className="col-xl-3 col-lg-5 col-md-12 customize_right">
                                     <div className="custome_frame_box">
                                         <h5 className='custome_frame_title'>format</h5>
                                         <div className="formate_btn">

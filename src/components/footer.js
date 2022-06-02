@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Image, } from 'react-bootstrap';
 
+import Banar_frame from '../img/Banar_frame.png';
 import FootArt from '../img/footerart.svg';
 import logo_2 from '../img/logo_2.svg';
 
@@ -22,6 +23,9 @@ function Footer() {
                     <div className="col footWidget_col foot_logo">
                         <div className="footwidget ">
                             <Image src={footLogo} />
+                            <div className="tabletFootLogo">
+                                <Image className='banar_frame' src={Banar_frame} />
+                            </div>
                         </div>
                     </div>
                     <div className="col footWidget_col quickLinks">

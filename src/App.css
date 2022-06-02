@@ -277,6 +277,8 @@ a.banar_btn {
 section.uniqueart_design {
   background: #FFF3E6;
   padding: 47px 0 0px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .qunique_container {
@@ -346,7 +348,7 @@ h3.border_title:after {
   left: 0;
   bottom: 0;
   width: 85px;
-  height: 1px;
+  height: 2px;
   display: block;
   background: #333333;
   content: "";
@@ -394,14 +396,17 @@ h3.border_title:after {
 section.art_design_area {
   padding: 155px 0 125px 0;
   background: #FCF3EE;
+  position: relative;
+  z-index: 1;
 }
 
 img.Customizeart {
   position: absolute;
   z-index: -1;
-  left: -15%;
-  bottom: -18%;
+  left: -260px;
+  bottom: -220px;
   pointer-events: none;
+  width: 665px;
 }
 
 section.customize_frame_area {
@@ -435,7 +440,7 @@ ul.customeFrame_tabs.nav.nav-tabs:before {
   height: 1px;
   background: #333333;
   content: "";
-  bottom: 0;
+  bottom: -1px;
 }
 
 ul.customeFrame_tabs.nav.nav-tabs:before {
@@ -564,7 +569,7 @@ h5.center_title span {
 .select_option.dropdown {
   text-align: center;
   display: table;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   position: relative;
 }
 
@@ -881,15 +886,21 @@ section.local_product_area {
 
 .local_img {
   width: 52%;
+  padding: 0 !important;
 }
 
 .local_content {
   width: 48%;
-  padding-left: 12%;
+  padding-left: 85px;
+  max-width: 490px;
 }
 
+.local_row.row {
+  align-items: center;
+}
+
+
 .local_content h2 {
-  margin-left: -55px;
   margin-bottom: 40px;
   font-size: 48px;
   line-height: 42px;
@@ -910,6 +921,7 @@ a.learnmore {
   color: #4E4E4E;
   transition: .3s ease all;
   font-weight: 700;
+  font-family: 'Bitter';
 }
 
 section.artwrokSetting {
@@ -995,6 +1007,11 @@ img.FootArt {
   font-size: 24px;
   line-height: 1;
   margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.subscribeCol .footwidget h3 {
+  text-decoration: none;
 }
 
 .footwidget ul li a {
@@ -1078,4 +1095,12 @@ img.FootArt {
 
 .navBrand img {
   filter: brightness(0);
+}
+
+section.artwrokSetting .container {
+  max-width: 1064px;
+}
+
+.tabletFootLogo {
+  display: none;
 }

@@ -17,7 +17,7 @@ function Nav_Bar() {
             <Container>
                 <div className="nav_container">
                     <div className="nav_left">
-                        <div className="nav_triger" id='navTriger'>
+                        <div className="nav_triger mobile_none" id='navTriger1'>
                             <Image className='menu_open' src={Hambar} />
                             <Image className='close_menu' src={Close} />
                         </div>
@@ -26,7 +26,7 @@ function Nav_Bar() {
                             <a href="#"><Image className='' src={Logo} /></a>
                         </div>
                     </div>
-                    <div className="nav_right mobile_none">
+                    <div className="nav_right ">
                         <div className="nav_search">
                             < Image className='searchIcon' src={Search} />
                         </div>
@@ -39,6 +39,11 @@ function Nav_Bar() {
                         <div className="nav_Cart">
                             < Image className='CartIcon' src={Cart} />
                         </div>
+                    </div>
+                    
+                    <div className="nav_triger mobile_only" id='navTriger1'>
+                        <Image className='menu_open' src={Hambar} />
+                        <Image className='close_menu' src={Close} />
                     </div>
                 </div>
             </Container>
