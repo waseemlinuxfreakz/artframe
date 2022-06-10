@@ -4,6 +4,8 @@ import { Container, Image, } from 'react-bootstrap';
 
 import CustomeFrame from './customeframe';
 
+import ArtDesign from './ArtandDesign';
+
 import Banar_frame from '../img/Banar_frame.png';
 import Unique_frame from '../img/Unique_frame.png';
 import Art_design from '../img/Art_design.png';
@@ -15,6 +17,12 @@ import LocalMove from '../img/LocalMove.png';
 import Artwork_1 from '../img/artwork_1.svg';
 import Artwork_2 from '../img/artwork_2.svg';
 import Artwork_3 from '../img/artwork_3.svg';
+
+import Gif_1 from '../img/gif/CustomizedArt(100).gif';
+import Gif_2 from '../img/gif/OurDesigns1(100).gif';
+import Gif_3 from '../img/gif/OurDesigns2(100).gif';
+import Gif_4 from '../img/gif/OurDesigns3(100).gif';
+import Gif_5 from '../img/gif/Personal(100).gif';
 
 import Customizeart from '../img/customizeart.svg';
 
@@ -30,36 +38,16 @@ function HomeContent() {
                             <a href="#" className='banar_btn blacksmall_btn mobile_none'>Discover our collection</a>
                         </div>
                         <div className="banar_right">
-                            <Image className='banar_frame' src={Banar_frame} />
+                            <Image className='banar_frame' src={Gif_1} />
                         </div>
                         <a href="#" className='banar_btn blacksmall_btn mobile_only'>Discover our collection</a>
                     </div>
                 </Container>
             </section>
 
-            <section className='uniqueart_design'>
-                <div className="container">
-                    <div className="qunique_container">
-                        <div className="unique_left">
-                            <Image className='unique_art_img' src={Unique_frame} />
-                            <span className='line_title'>LINA</span>
-                        </div>
-                        <a href="#" className='blackBtn mobile_only'>Customize now</a>
-                        <div className="unique_right">
-                            <div className="unique_right_content">
-                                <h2 className='unique_line_title'>
-                                    Elevate your world <br /> with unique Art & Design
-                                </h2>
-                                <div className="color_box">
-                                    <h3 className="border_title"> MAKE IT PERSONAL </h3>
-                                    <p>Customized art printed on premium <br /> archival paper in multiple colors shandes and sizes.</p>
-                                </div>
-                                <a href="#" className='blackBtn mobile_none'>Customize now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section className="artdesignSlide">
+                <ArtDesign/>
+            </section>  
 
             <section className="art_design_area">
                 <div className="container">
@@ -91,7 +79,7 @@ function HomeContent() {
                     <div className="customerow row">
                         <div className="col-lg-4 col-md-4 col-12">
                             <div className="design_col">
-                                <Image src={Ourdesing_1} />
+                                <Image src={Gif_2} />
                                 <div className="design_content">
                                     <h3>Line Art</h3>
                                     <p>Custom prints from $39</p>
@@ -101,7 +89,7 @@ function HomeContent() {
                         </div>
                         <div className="col-lg-4 col-md-4 col-12">
                             <div className="design_col">
-                                <Image src={Ourdesing_2} />
+                                <Image src={Gif_3} />
                                 <div className="design_content">
                                     <h3>Modern Art</h3>
                                     <p>Custom prints from $39</p>
@@ -111,7 +99,7 @@ function HomeContent() {
                         </div>
                         <div className="col-lg-4 col-md-4 col-12">
                             <div className="design_col">
-                                <Image src={Ourdesing_3} />
+                                <Image src={Gif_4} />
                                 <div className="design_content">
                                     <h3>Classic Art</h3>
                                     <p>Custom prints from $39</p>
@@ -196,7 +184,7 @@ function HomeContent() {
                         <div className="col-lg-4 col-md-4 col-4">
                             <div className="artwork_cont">
                                 <div className="artwork_cont_img">
-                                    <Image src={Artwork_3} />
+                                    <Image src={Gif_5} />
                                 </div>
                                 <h5>Personal</h5>
                                 <p>You are in complete control of the creative process. Your space now can connect to you . </p>

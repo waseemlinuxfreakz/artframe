@@ -274,8 +274,11 @@ a.banar_btn {
   text-transform: uppercase;
 }
 
-section.uniqueart_design {
+.artdesignSlide {
   background: #FFF3E6;
+}
+
+.uniqueart_design {
   padding: 47px 0 0px 0;
   position: relative;
   z-index: 2;
@@ -289,9 +292,46 @@ section.uniqueart_design {
   width: 461px;
   position: relative;
   z-index: 1;
-  margin-bottom: -55px;
   flex-shrink: 0;
+  margin-bottom: 30px;
 }
+
+.unique_leftaImg {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.unique_leftaImg img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  left: 100%;
+  transition: 1s cubic-bezier(0.51, 0.63, 0.1, 1.09) all;
+  transition-delay: .3s;
+}
+
+.unique_leftaImg:after {
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #cab18c;
+  content: "";
+  transition: .3s ease all;
+}
+/* 
+.slick-active .unique_leftaImg:after {
+  left: 0;
+} */
+
+.slick-active .unique_leftaImg img {
+  left: 0;
+}
+
 
 .unique_right {
   flex-grow: 1;
@@ -309,6 +349,8 @@ h2.unique_line_title {
   position: relative;
   z-index: 1;
   margin-bottom: 50px;
+  transform: translateY(-50px);
+  opacity: 0;
 }
 
 span.line_title {
@@ -324,12 +366,55 @@ span.line_title {
   top: 76px;
   left: 100%;
   margin-left: 25px;
+  transition: .5s ease all;
+  transform: translateY(-50px);
+}
+
+.slick-active span.line_title {
+  transform: translateY(0px);
 }
 
 .color_box {
   background: #F9EFE1;
   padding: 14px 20px;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.unique_right_content .blackBtn {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.slick-active h2.unique_line_title {
+  transition: .5s ease all;
+  transition-delay: .7s;
+}
+
+.slick-active .color_box {
+  transition: .5s ease all;
+  transition-delay: 1s;
+}
+
+.slick-active .unique_right_content .blackBtn {
+  transition: .5s ease all;
+  transition-delay: 1.3s;
+}
+
+.slick-active h2.unique_line_title,
+.slick-active .color_box,
+.slick-active .unique_right_content .blackBtn {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.slick-list {
+  overflow: visible !important;
 }
 
 h3.border_title {
@@ -1103,4 +1188,25 @@ section.artwrokSetting .container {
 
 .tabletFootLogo {
   display: none;
+}
+
+.slick-prev, 
+.slick-next {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
+    background: transparent;
+    border-radius: 50%;
+    transition: .3s ease all;
+}
+
+.slick-next {
+    right: 15px;
+}
+
+.slick-prev {
+    left: 15px;
 }

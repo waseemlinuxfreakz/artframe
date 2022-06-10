@@ -1,7 +1,8 @@
+import React, { Component }  from 'react';
+
 import Nav_Bar from './components/navbar';
 import HomeContent from './components/home_content';
 import Footer from './components/footer';
-
 import './App.css';
 import './responsive.css';
 
