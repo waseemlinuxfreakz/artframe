@@ -1210,3 +1210,7 @@ section.artwrokSetting .container {
 .slick-prev {
     left: 15px;
 }
+.slick-next, .slick-prev {
+  z-index: 111;
+  border: 1px solid #848484;
+}
