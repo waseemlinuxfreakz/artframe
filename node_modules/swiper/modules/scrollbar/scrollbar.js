@@ -26,9 +26,7 @@ export default function Scrollbar(_ref) {
       snapOnRelease: true,
       lockClass: 'swiper-scrollbar-lock',
       dragClass: 'swiper-scrollbar-drag',
-      scrollbarDisabledClass: 'swiper-scrollbar-disabled',
-      horizontalClass: `swiper-scrollbar-horizontal`,
-      verticalClass: `swiper-scrollbar-vertical`
+      scrollbarDisabledClass: 'swiper-scrollbar-disabled'
     }
   });
   swiper.scrollbar = {
@@ -304,7 +302,6 @@ export default function Scrollbar(_ref) {
       $el = $swiperEl.find(params.el);
     }
 
-    $el.addClass(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
     let $dragEl = $el.find(`.${swiper.params.scrollbar.dragClass}`);
 
     if ($dragEl.length === 0) {
@@ -329,13 +326,6 @@ export default function Scrollbar(_ref) {
   }
 
   function destroy() {
-    const params = swiper.params.scrollbar;
-    const $el = swiper.scrollbar.$el;
-
-    if ($el) {
-      $el.removeClass(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
-    }
-
     disableDraggable();
   }
 
