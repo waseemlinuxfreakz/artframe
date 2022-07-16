@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useEffect,useState} from 'react';
 
 import CustomizeImage from '../img/car.png';
 import Carhorizontal from '../img/car-horizontal.png';
@@ -13,6 +13,12 @@ import RelatedPost from './RelatedPost';
 
 
 function CustomizeYourArt() {
+    const [isActive, setIsActive] = useState(false);
+
+    const desktopviewClick = event => {
+        setIsActive(current => !current);
+    };
+
     return (
         <section className="CustomizeYourArt">
             <div className="container">
@@ -22,7 +28,7 @@ function CustomizeYourArt() {
                     </div>
                     <div className="row customizeRow">
                         <div className="customize_left_col">
-                            <div className="customize_image">
+                            <div className={isActive ? 'horizontalimage customize_image' : 'customize_image'}>
                                 <img src={CustomizeImage} alt="Customize Image" className="vertical_img"/ >
                                 <img src={Carhorizontal} alt="Customize Image" className="horizontal_img"/ >
                             </div>
@@ -120,11 +126,11 @@ function CustomizeYourArt() {
                                 <h5>Layout</h5>
                                 <div className="select_Layout">
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_hori' />
+                                        <input type="radio" name='layOut' id='layout_hori'  onClick={desktopviewClick} />
                                         <label htmlFor="layout_hori" className='layout_hori'>A</label>
                                     </div>
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_verti' />
+                                        <input type="radio" name='layOut' id='layout_verti' onClick={desktopviewClick}/>
                                         <label htmlFor="layout_verti" className='layout_verti'>A</label>
                                     </div>
                                 </div>
