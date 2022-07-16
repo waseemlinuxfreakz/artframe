@@ -41,7 +41,7 @@ function Navmenu() {
                     </form>
                 </div>
             </div>
-            <div className="menuSocial mobileOnly">
+            <div className="menuSocial mobile_only">
                 <ul>
                     <li><a href="#"><Image src={Twitter} /> </a></li>
                     <li><a href="#"><Image src={Facebook} /> </a></li>
