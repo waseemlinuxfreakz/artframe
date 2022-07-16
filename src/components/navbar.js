@@ -20,7 +20,8 @@ function Nav_Bar() {
   const handleClick = event => {
     // 👇️ toggle isActive state on click
     //setIsActive(current => !current);
-    console.log("asdfasdfas");
+    //console.log("asdfasdfas");
+    
     document.body.classList.add('menuopen');
   };
 
@@ -58,8 +59,8 @@ function Nav_Bar() {
                     </div>
                     
                     <div className="nav_triger mobile_only" id='navTriger1'>
-                        <Image className='menu_open' src={Hambar} />
-                        <Image className='close_menu' src={Close} />
+                        <Image className='menu_open' src={Hambar} onClick={handleClick}/>
+                        <Image className='close_menu' src={Close} onClick={closeClick}/>
                     </div>
                 </div>
             </Container>

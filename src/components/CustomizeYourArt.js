@@ -16,8 +16,17 @@ function CustomizeYourArt() {
     const [isActive, setIsActive] = useState(false);
 
     const desktopviewClick = event => {
-        setIsActive(current => !current);
+        //setIsActive(current => !current);
+        
+        var element = document.getElementById("horizental_sect");
+        element.classList.add("horizontalimage");
     };
+    const desktopviewremoveClick = event => {
+        //setIsActive(current => !current);
+        var element = document.getElementById("horizental_sect");
+        element.classList.remove("horizontalimage");
+    };
+    
 
     return (
         <section className="CustomizeYourArt">
@@ -28,7 +37,7 @@ function CustomizeYourArt() {
                     </div>
                     <div className="row customizeRow">
                         <div className="customize_left_col">
-                            <div className={isActive ? 'horizontalimage customize_image' : 'customize_image'}>
+                            <div className="customize_image" id="horizental_sect">
                                 <img src={CustomizeImage} alt="Customize Image" className="vertical_img"/ >
                                 <img src={Carhorizontal} alt="Customize Image" className="horizontal_img"/ >
                             </div>
@@ -130,7 +139,7 @@ function CustomizeYourArt() {
                                         <label htmlFor="layout_hori" className='layout_hori'>A</label>
                                     </div>
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_verti' onClick={desktopviewClick}/>
+                                        <input type="radio" name='layOut' id='layout_verti' onClick={desktopviewremoveClick}/>
                                         <label htmlFor="layout_verti" className='layout_verti'>A</label>
                                     </div>
                                 </div>
