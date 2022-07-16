@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useEffect,useState} from 'react';
 
 import CustomizeImage from '../img/car.png';
 import CustomizeShare from './social';
@@ -12,6 +12,13 @@ import RelatedPost from './RelatedPost';
 
 
 function CustomizeYourArt() {
+    
+    const [isActive, setIsActive] = useState(false);
+
+    const desktopviewClick = event => {
+    
+    };
+
     return (
         <section className="CustomizeYourArt">
             <div className="container">
@@ -118,11 +125,11 @@ function CustomizeYourArt() {
                                 <h5>Layout</h5>
                                 <div className="select_Layout">
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_hori' />
+                                        <input type="radio" name='layOut' id='layout_hori' onClick={desktopviewClick} />
                                         <label htmlFor="layout_hori" className='layout_hori'>A</label>
                                     </div>
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_verti' />
+                                        <input type="radio" name='layOut' id='layout_verti' onClick={desktopviewClick} />
                                         <label htmlFor="layout_verti" className='layout_verti'>A</label>
                                     </div>
                                 </div>

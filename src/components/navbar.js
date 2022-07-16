@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useEffect,useState} from 'react';
 import { Container, Image, } from 'react-bootstrap';
 import Navmenu from './navmenu';
 
@@ -11,15 +11,31 @@ import Nav_close from '../img/nav_close.svg';
 import Search from '../img/search.svg';
 import User from '../img/user.svg';
 
+
+
 function Nav_Bar() {
+    
+    const [isActive, setIsActive] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle isActive state on click
+    //setIsActive(current => !current);
+    console.log("asdfasdfas");
+    document.body.classList.add('menuopen');
+  };
+
+  const closeClick = event => {
+    document.body.classList.remove('menuopen');
+  };
+
     return (
         <header className='header_area'>
             <Container>
                 <div className="nav_container">
                     <div className="nav_left">
                         <div className="nav_triger mobile_none" id='navTriger1'>
-                            <Image className='menu_open' src={Hambar} />
-                            <Image className='close_menu' src={Close} />
+                            <Image className='menu_open' src={Hambar} onClick={handleClick}/>
+                            <Image className='close_menu' src={Close} onClick={closeClick}/>
                         </div>
                         <Navmenu />
                         <div className="navBrand">
