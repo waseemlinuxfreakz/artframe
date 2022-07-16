@@ -1,6 +1,7 @@
-import {React,useEffect,useState} from 'react';
+import React from 'react';
 
 import CustomizeImage from '../img/car.png';
+import Carhorizontal from '../img/car-horizontal.png';
 import CustomizeShare from './social';
 import CheckoutLogo from '../img/CheckoutLogo.svg';
 import Color1 from '../img/color/color-1.svg';
@@ -12,13 +13,6 @@ import RelatedPost from './RelatedPost';
 
 
 function CustomizeYourArt() {
-    
-    const [isActive, setIsActive] = useState(false);
-
-    const desktopviewClick = event => {
-    
-    };
-
     return (
         <section className="CustomizeYourArt">
             <div className="container">
@@ -29,7 +23,8 @@ function CustomizeYourArt() {
                     <div className="row customizeRow">
                         <div className="customize_left_col">
                             <div className="customize_image">
-                                <img src={CustomizeImage} alt="Customize Image" />
+                                <img src={CustomizeImage} alt="Customize Image" className="vertical_img"/ >
+                                <img src={Carhorizontal} alt="Customize Image" className="horizontal_img"/ >
                             </div>
                             <h3 className="artNumber">Custome Art <span>3</span> <CustomizeShare /></h3>
                             <div className="artPrize">$59</div>
@@ -125,11 +120,11 @@ function CustomizeYourArt() {
                                 <h5>Layout</h5>
                                 <div className="select_Layout">
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_hori' onClick={desktopviewClick} />
+                                        <input type="radio" name='layOut' id='layout_hori' />
                                         <label htmlFor="layout_hori" className='layout_hori'>A</label>
                                     </div>
                                     <div className="layOp">
-                                        <input type="radio" name='layOut' id='layout_verti' onClick={desktopviewClick} />
+                                        <input type="radio" name='layOut' id='layout_verti' />
                                         <label htmlFor="layout_verti" className='layout_verti'>A</label>
                                     </div>
                                 </div>

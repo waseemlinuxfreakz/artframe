@@ -1690,3 +1690,22 @@ a.PringBtn.Export_btn {
   height: 140px;
   width: auto;
 }
+
+img.horizontal_img {
+  display: none;
+}
+
+.customize_image.horizontalimage img.vertical_img {
+  display: none;
+}
+
+.customize_image.horizontalimage img.horizontal_img {
+  max-height: 370px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.customize_image.horizontalimage {
+  padding: 20px 70px;
+}
