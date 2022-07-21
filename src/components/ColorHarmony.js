@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useEffect,useState} from 'react';
 
 import { Container, Image, Tabs, Tab, Dropdown, Toggle, Item, } from 'react-bootstrap';
 
@@ -11,6 +11,21 @@ import CustomizeShare from './social';
 
 
 function ColorHarmony() {
+    const [isActive, setIsActive] = useState(false);
+
+    const desktopviewClick = event => {
+        //setIsActive(current => !current);
+        console.log("working alert");
+        
+        var element = document.getElementById("horizental_sect");
+        element.classList.add("activeLandscape");
+    };
+    const desktopviewremoveClick = event => {
+        //setIsActive(current => !current);
+        var element = document.getElementById("horizental_sect");
+        element.classList.remove("activeLandscape");
+    };
+
     return (
         <div className="customize_frame_box">
             <div className="customeze_row">
@@ -74,14 +89,14 @@ function ColorHarmony() {
                         <div className="custome_frame_box">
                             <h5 className='custome_frame_title'>layout</h5>
                             <div className="selectLayout">
-                                <span className="port_layout">Portrait</span>
-                                <span className="lands_layout">landscape</span>
+                                <span className="port_layout" onClick={desktopviewremoveClick}>Portrait</span>
+                                <span className="lands_layout" onClick={desktopviewClick}>landscape</span>
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-5 col-lg-12 col-md-12 customize_center">
                     {/* toggle classs "activeLandscape" */}
-                        <div className="customeframe_box">
+                        <div className="customeframe_box" id="horizental_sect">
                             <Image src={CustomizeFrame} className="Portrait"/ >
                             <Image src={CustomizeFramelandscape} className="landscape"/ >
                         </div>
