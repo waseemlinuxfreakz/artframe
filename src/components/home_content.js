@@ -26,15 +26,15 @@ function HomeContent() {
 
             <CustomizeArtSec/>
 
-            <CustomizeYourArt/>
+            {/* <CustomizeYourArt/> */}
 
-            {/* <section className="customize_frame_area">
+            <section className="customize_frame_area">
                 <Image src={Customizeart} className="customize_Customizeart" />
                 <div className="container">
                     <h2 className="custome_title">customize here</h2>
                     <CustomeFrame />
                 </div>
-            </section> */}
+            </section>
 
             <DesignCollection/>
 
